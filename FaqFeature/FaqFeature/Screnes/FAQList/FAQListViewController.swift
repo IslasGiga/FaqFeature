@@ -9,9 +9,37 @@
 import UIKit
 
 class FAQListViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+    }
+    
+    override func loadView(){
+        super.loadView()
+        view = FAQListView(tableViewConfiguration: self, buttonAction: didTapButton)
     }
 }
+
+extension FAQListViewController{
+    func didTapButton(){
+        //TODO: Go to createNewFaq
+    }
+}
+
+extension FAQListViewController: UITableViewDelegate{
+    
+}
+
+extension FAQListViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+}
+
+
