@@ -14,7 +14,7 @@
 		79A0E3D925CDF0AB004185A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D725CDF0AB004185A0 /* LaunchScreen.storyboard */; };
 		79A0E3E425CDF0AB004185A0 /* FaqFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3E325CDF0AB004185A0 /* FaqFeatureTests.swift */; };
 		79A0E3EF25CDF0AB004185A0 /* FaqFeatureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3EE25CDF0AB004185A0 /* FaqFeatureUITests.swift */; };
-		79A0E3FD25CDF4CC004185A0 /* FaqListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3FC25CDF4CC004185A0 /* FaqListViewController.swift */; };
+		79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		79A0E3EA25CDF0AB004185A0 /* FaqFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaqFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3EE25CDF0AB004185A0 /* FaqFeatureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqFeatureUITests.swift; sourceTree = "<group>"; };
 		79A0E3F025CDF0AB004185A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79A0E3FC25CDF4CC004185A0 /* FaqListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqListViewController.swift; sourceTree = "<group>"; };
+		79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +99,9 @@
 		79A0E3CB25CDF0A7004185A0 /* FaqFeature */ = {
 			isa = PBXGroup;
 			children = (
+				79A0E3FE25CDF526004185A0 /* Screnes */,
 				79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */,
 				79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */,
-				79A0E3FC25CDF4CC004185A0 /* FaqListViewController.swift */,
 				79A0E3D225CDF0A7004185A0 /* Main.storyboard */,
 				79A0E3D525CDF0AB004185A0 /* Assets.xcassets */,
 				79A0E3D725CDF0AB004185A0 /* LaunchScreen.storyboard */,
@@ -126,6 +126,22 @@
 				79A0E3F025CDF0AB004185A0 /* Info.plist */,
 			);
 			path = FaqFeatureUITests;
+			sourceTree = "<group>";
+		};
+		79A0E3FE25CDF526004185A0 /* Screnes */ = {
+			isa = PBXGroup;
+			children = (
+				79A0E3FF25CDF55E004185A0 /* FAQList */,
+			);
+			path = Screnes;
+			sourceTree = "<group>";
+		};
+		79A0E3FF25CDF55E004185A0 /* FAQList */ = {
+			isa = PBXGroup;
+			children = (
+				79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */,
+			);
+			path = FAQList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */,
-				79A0E3FD25CDF4CC004185A0 /* FaqListViewController.swift in Sources */,
+				79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
