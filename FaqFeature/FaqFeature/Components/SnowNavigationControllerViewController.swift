@@ -14,10 +14,7 @@ class SnowNavigationControllerViewController: UINavigationController {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
         navigationBar.barTintColor = .blue
-        if let customFont = UIFont(name: "ArialRoundedMTBold", size: 18) {
-            navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
-                                                 .font: customFont
-            ]
-        }
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
+                                             .font: UIFont.arialFont]
     }
 }
