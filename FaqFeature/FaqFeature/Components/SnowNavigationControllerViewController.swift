@@ -13,7 +13,7 @@ class SnowNavigationControllerViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
-        navigationBar.barTintColor = .blue
+        navigationBar.barTintColor = .snowBlue
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
                                              .font: UIFont.arialFont]
     }

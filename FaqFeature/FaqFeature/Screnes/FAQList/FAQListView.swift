@@ -58,7 +58,7 @@ extension FAQListView{
         bottomButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
         bottomButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
         bottomButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16).isActive = true
-        bottomButton.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        bottomButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         
         tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16).isActive = true
