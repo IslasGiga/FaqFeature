@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AB525CE018A00A324E3 /* SnowNavigationControllerViewController.swift */; };
+		798E3AB825CEE77C00A324E3 /* arial-rounded-mt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		798E3AB525CE018A00A324E3 /* SnowNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowNavigationControllerViewController.swift; sourceTree = "<group>"; };
+		798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt-bold.ttf"; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		798E3AB425CE017000A324E3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				798E3AB525CE018A00A324E3 /* SnowNavigationControllerViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		79A0E3C025CDF0A7004185A0 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		79A0E3CB25CDF0A7004185A0 /* FaqFeature */ = {
 			isa = PBXGroup;
 			children = (
+				798E3AB425CE017000A324E3 /* Components */,
 				79A0E3FE25CDF526004185A0 /* Screnes */,
 				79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */,
 				79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */,
@@ -108,6 +121,7 @@
 				79A0E3D525CDF0AB004185A0 /* Assets.xcassets */,
 				79A0E3D725CDF0AB004185A0 /* LaunchScreen.storyboard */,
 				79A0E3DA25CDF0AB004185A0 /* Info.plist */,
+				798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */,
 			);
 			path = FaqFeature;
 			sourceTree = "<group>";
@@ -251,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798E3AB825CEE77C00A324E3 /* arial-rounded-mt-bold.ttf in Resources */,
 				79A0E3D925CDF0AB004185A0 /* LaunchScreen.storyboard in Resources */,
 				79A0E3D625CDF0AB004185A0 /* Assets.xcassets in Resources */,
 				79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */,
@@ -279,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */,
+				798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */,
 				79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,
 				79A0E40125CDF646004185A0 /* FAQListView.swift in Sources */,

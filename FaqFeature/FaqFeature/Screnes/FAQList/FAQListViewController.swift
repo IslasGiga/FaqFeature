@@ -12,6 +12,7 @@ class FAQListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Perguntas frequentes"
     }
     
     override func loadView(){
