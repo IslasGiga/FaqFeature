@@ -26,13 +26,8 @@ class FAQListView: UIView {
         return tableView
     }()
     
-    lazy var bottomButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Adicionar pergunta", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.backgroundColor = .yellow
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
+    lazy var bottomButton: SnowButton = {
+        let button = SnowButton(title: "Adicionar pergunta")
         return button
     }()
     
@@ -54,6 +49,8 @@ extension FAQListView{
         backgroundColor = .white
         addSubview(tableView)
         addSubview(bottomButton)
+        guard let buttonAction = buttonAction else {return}
+        bottomButton.action = buttonAction
     }
     
     fileprivate func setupConstraints(){
@@ -68,10 +65,5 @@ extension FAQListView{
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomButton.topAnchor, constant: -16).isActive = true
-    }
-    
-    
-    @objc fileprivate func didTapButton(){
-        buttonAction?()
     }
 }
