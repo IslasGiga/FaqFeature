@@ -49,6 +49,8 @@ extension FAQListViewController: UITableViewDataSource{
             print("Deu ruim!")
             return UITableViewCell()
         }
+        cell.setup(viewModel: FAQCellViewModel(question: "Question", answer: "Loren Ipsun Dolor, blablablablabalbalablablablabalbalbalbalablablablablabalbalbalbalbalablablablabalbalbalbalbalablablablablablablablabalbalbalbalablbalaa", color: .snowRed))
+        
         return cell
     }
     
