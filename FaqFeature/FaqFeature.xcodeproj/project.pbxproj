@@ -12,6 +12,7 @@
 		798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABA25CEEB0B00A324E3 /* UIFontExtension.swift */; };
 		798E3ABD25CEEB7B00A324E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABC25CEEB7B00A324E3 /* UIColorExtension.swift */; };
 		798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABE25CEFE6A00A324E3 /* SnowButton.swift */; };
+		798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		798E3ABA25CEEB0B00A324E3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		798E3ABC25CEEB7B00A324E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		798E3ABE25CEFE6A00A324E3 /* SnowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowButton.swift; sourceTree = "<group>"; };
+		798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 				798E3ABC25CEEB7B00A324E3 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		798E3AC025CF063500A324E3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		79A0E3C025CDF0A7004185A0 = {
@@ -172,6 +182,7 @@
 		79A0E3FF25CDF55E004185A0 /* FAQList */ = {
 			isa = PBXGroup;
 			children = (
+				798E3AC025CF063500A324E3 /* Cells */,
 				79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */,
 				79A0E40025CDF646004185A0 /* FAQListView.swift */,
 			);
@@ -312,6 +323,7 @@
 			files = (
 				79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */,
 				798E3ABD25CEEB7B00A324E3 /* UIColorExtension.swift in Sources */,
+				798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */,
 				798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */,
 				79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,

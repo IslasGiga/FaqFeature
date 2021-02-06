@@ -10,14 +10,21 @@ import UIKit
 
 class FAQListViewController: UIViewController {
     
+    lazy var customView: FAQListView = {
+        let view = FAQListView(tableViewConfiguration: self, buttonAction: didTapButton)
+        view.tableView.register(FAQTableViewCell.self, forCellReuseIdentifier: FAQTableViewCell.id)
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Perguntas frequentes"
+        
     }
     
     override func loadView(){
         super.loadView()
-        view = FAQListView(tableViewConfiguration: self, buttonAction: didTapButton)
+        view = customView
     }
 }
 
@@ -37,7 +44,12 @@ extension FAQListViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FAQTableViewCell.id, for: indexPath) as? FAQTableViewCell else{
+            print("Deu ruim!")
+            return UITableViewCell()
+        }
+        return cell
     }
     
     

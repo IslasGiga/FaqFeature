@@ -23,6 +23,7 @@ class FAQListView: UIView {
         tableView.delegate = self.tableViewConfiguration
         tableView.dataSource = self.tableViewConfiguration
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     
