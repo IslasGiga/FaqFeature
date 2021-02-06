@@ -31,7 +31,7 @@ class SnowButton: UIButton {
         backgroundColor = .snowYellow
         translatesAutoresizingMaskIntoConstraints = false
         addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        titleLabel?.font = UIFont.arialFont
+        titleLabel?.font = UIFont.arialBoldFont(withSize: 18)
         
     }
     

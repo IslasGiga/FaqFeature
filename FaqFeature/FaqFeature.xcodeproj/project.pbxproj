@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AB525CE018A00A324E3 /* SnowNavigationControllerViewController.swift */; };
-		798E3AB825CEE77C00A324E3 /* arial-rounded-mt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */; };
 		798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABA25CEEB0B00A324E3 /* UIFontExtension.swift */; };
 		798E3ABD25CEEB7B00A324E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABC25CEEB7B00A324E3 /* UIColorExtension.swift */; };
 		798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3ABE25CEFE6A00A324E3 /* SnowButton.swift */; };
 		798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */; };
+		798E3ACD25CF23CF00A324E3 /* arial-rounded-mt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3ACB25CF23CF00A324E3 /* arial-rounded-mt.ttf */; };
+		798E3ACE25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3ACC25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -43,11 +44,12 @@
 
 /* Begin PBXFileReference section */
 		798E3AB525CE018A00A324E3 /* SnowNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowNavigationControllerViewController.swift; sourceTree = "<group>"; };
-		798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt-bold.ttf"; sourceTree = "<group>"; };
 		798E3ABA25CEEB0B00A324E3 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		798E3ABC25CEEB7B00A324E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		798E3ABE25CEFE6A00A324E3 /* SnowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowButton.swift; sourceTree = "<group>"; };
 		798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		798E3ACB25CF23CF00A324E3 /* arial-rounded-mt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt.ttf"; sourceTree = "<group>"; };
+		798E3ACC25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt-bold.ttf"; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		798E3AC325CF232600A324E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				798E3AC425CF233500A324E3 /* Fonts */,
+				79A0E3D525CDF0AB004185A0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		798E3AC425CF233500A324E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				798E3ACC25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf */,
+				798E3ACB25CF23CF00A324E3 /* arial-rounded-mt.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		79A0E3C025CDF0A7004185A0 = {
 			isa = PBXGroup;
 			children = (
@@ -139,16 +159,15 @@
 		79A0E3CB25CDF0A7004185A0 /* FaqFeature */ = {
 			isa = PBXGroup;
 			children = (
+				798E3AC325CF232600A324E3 /* Resources */,
 				798E3AB925CEEAF900A324E3 /* Extensions */,
 				798E3AB425CE017000A324E3 /* Components */,
 				79A0E3FE25CDF526004185A0 /* Screnes */,
 				79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */,
 				79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */,
 				79A0E3D225CDF0A7004185A0 /* Main.storyboard */,
-				79A0E3D525CDF0AB004185A0 /* Assets.xcassets */,
 				79A0E3D725CDF0AB004185A0 /* LaunchScreen.storyboard */,
 				79A0E3DA25CDF0AB004185A0 /* Info.plist */,
-				798E3AB725CEE76500A324E3 /* arial-rounded-mt-bold.ttf */,
 			);
 			path = FaqFeature;
 			sourceTree = "<group>";
@@ -293,10 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798E3AB825CEE77C00A324E3 /* arial-rounded-mt-bold.ttf in Resources */,
 				79A0E3D925CDF0AB004185A0 /* LaunchScreen.storyboard in Resources */,
+				798E3ACD25CF23CF00A324E3 /* arial-rounded-mt.ttf in Resources */,
 				79A0E3D625CDF0AB004185A0 /* Assets.xcassets in Resources */,
 				79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */,
+				798E3ACE25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

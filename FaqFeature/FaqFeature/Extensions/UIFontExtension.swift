@@ -9,5 +9,14 @@
 import UIKit
 
 extension UIFont{
-    static let arialFont: UIFont = UIFont(name: "ArialRoundedMTBold", size: 18)!
+    
+    static func arialBoldFont(withSize size: CGFloat = 18) -> UIFont {
+        return UIFont(name: "ArialRoundedMTBold", size: size)!
+    }
+    
+    static func arialFont(withSize size: CGFloat = 18) -> UIFont{
+        return UIFont(name: "ArialRoundedMT", size: size)!
+    }
+    
+    
 }

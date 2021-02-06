@@ -17,14 +17,21 @@ struct FAQCellViewModel{
 
 class FAQTableViewCell: UITableViewCell {
     
+    var expanded: Bool = false{
+        didSet{
+            expanded ? expandCell() : contractCell()
+        }
+    }
+    
+    private var bottomConstraint: NSLayoutConstraint?
+    
     static let id: String = "FAQTableViewCell"
     
     private var viewModel: FAQCellViewModel?
     
     private var expandButton: UIButton = {
         let button = UIButton()
-        button.setTitle("v", for: .normal)
-        button.setTitleColor(.snowBlue, for: .normal)
+        button.setImage(UIImage(named: "down"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -52,7 +59,7 @@ class FAQTableViewCell: UITableViewCell {
     lazy var questionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.arialFont
+        label.font = UIFont.arialBoldFont(withSize: 18)
         label.text = viewModel?.question
         return label
     }()
@@ -60,8 +67,9 @@ class FAQTableViewCell: UITableViewCell {
     lazy var answerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.arialFont
+        label.font = UIFont.arialFont(withSize: 16)
         label.text = viewModel?.answer
+        label.numberOfLines = 0
         return label
     }()
     
@@ -79,15 +87,15 @@ class FAQTableViewCell: UITableViewCell {
         containerView.addSubview(colorView)
         containerView.addSubview(expandButton)
         containerView.addSubview(questionLabel)
-        containerView.addSubview(answerLabel)
+        
     }
     
     private func setupConstraints(){
         
-        shadowView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
+        shadowView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
         shadowView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16).isActive = true
         shadowView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16).isActive = true
-        shadowView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
+        shadowView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4).isActive = true
         
         containerView.topAnchor.constraint(equalTo: shadowView.topAnchor).isActive = true
         containerView.leftAnchor.constraint(equalTo: shadowView.leftAnchor).isActive = true
@@ -99,7 +107,7 @@ class FAQTableViewCell: UITableViewCell {
         colorView.widthAnchor.constraint(equalToConstant: 2).isActive = true
         colorView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         
-        expandButton.bottomAnchor.constraint(equalTo: containerView.topAnchor, constant: 32).isActive = true
+        expandButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true
         expandButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         expandButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
         expandButton.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
@@ -107,13 +115,10 @@ class FAQTableViewCell: UITableViewCell {
         questionLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true
         questionLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
         questionLabel.rightAnchor.constraint(equalTo: expandButton.rightAnchor, constant: -16).isActive = true
-        
-        answerLabel.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 16).isActive = true
-        answerLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
-        answerLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
-        answerLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
-        
+        bottomConstraint = questionLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16)
+        bottomConstraint?.isActive = true
     }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -141,6 +146,26 @@ class FAQTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        contentView.backgroundColor = .white
+        selectedBackgroundView = UIView()
     }
+}
 
+extension FAQTableViewCell{
+    
+    fileprivate func expandCell(){
+        expandButton.setImage(UIImage(named: "up"), for: .normal)
+        bottomConstraint?.isActive = false
+        containerView.addSubview(answerLabel)
+        answerLabel.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 16).isActive = true
+        answerLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
+        answerLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
+        answerLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
+    }
+    
+    fileprivate func contractCell(){
+        expandButton.setImage(UIImage(named: "down"), for: .normal)
+        answerLabel.removeFromSuperview()
+        bottomConstraint?.isActive = true
+    }
 }

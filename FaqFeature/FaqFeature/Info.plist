@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>arial-rounded-mt.ttf</string>
 		<string>arial-rounded-mt-bold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

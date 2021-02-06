@@ -13,6 +13,8 @@ class FAQListViewController: UIViewController {
     lazy var customView: FAQListView = {
         let view = FAQListView(tableViewConfiguration: self, buttonAction: didTapButton)
         view.tableView.register(FAQTableViewCell.self, forCellReuseIdentifier: FAQTableViewCell.id)
+        view.tableView.rowHeight = UITableView.automaticDimension
+        view.tableView.estimatedRowHeight = 120
         return view
     }()
     
@@ -35,10 +37,20 @@ extension FAQListViewController{
 }
 
 extension FAQListViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? FAQTableViewCell else {
+            return
+        }
+        cell.contentView.backgroundColor = .white
+        cell.backgroundColor = .white
+        tableView.beginUpdates()
+        cell.expanded = !(cell.expanded)
+        tableView.endUpdates()
+    }
 }
 
 extension FAQListViewController: UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
