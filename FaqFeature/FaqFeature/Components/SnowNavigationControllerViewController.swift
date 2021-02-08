@@ -16,5 +16,10 @@ class SnowNavigationControllerViewController: UINavigationController {
         navigationBar.barTintColor = .snowBlue
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
                                              .font: UIFont.arialBoldFont(withSize: 18)]
+        navigationBar.tintColor = .white
+        
+        let barButtonItemAppearance = UIBarButtonItem.appearance()
+        barButtonItemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+        
     }
 }
