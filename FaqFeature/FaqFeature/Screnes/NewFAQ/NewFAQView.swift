@@ -24,20 +24,16 @@ class NewFAQView: UIView {
         return view
     }()
     
-    lazy var questionTitleTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .roundedRect
-        textField.placeholder = "Título da pergunta"
-        return textField
+    lazy var questionTitleTextField: SnowTextField = {
+        let textView = SnowTextField()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
     }()
     
-    lazy var answerTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Resposta da pergunta"
-        return textField
+    lazy var answerTextField: SnowTextField = {
+        let textView = SnowTextField()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
     }()
     
     lazy var colorLabel: UILabel = {
@@ -56,8 +52,8 @@ class NewFAQView: UIView {
         return view
     }()
 
-    lazy var bottomButton: SnowButton = {
-        let button = SnowButton(title: "Adicionar")
+    lazy var bottomButton: SnowBottomButton = {
+        let button = SnowBottomButton(title: "Adicionar")
         return button
     }()
     
@@ -97,12 +93,11 @@ class NewFAQView: UIView {
         questionTitleTextField.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true
         questionTitleTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
         questionTitleTextField.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
-        questionTitleTextField.heightAnchor.constraint(equalToConstant: 70).isActive = true
+//        questionTitleTextField.heightAnchor.constraint(equalToConstant: 70).isActive = true
 
         answerTextField.topAnchor.constraint(equalTo: questionTitleTextField.bottomAnchor, constant: 16).isActive = true
         answerTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
         answerTextField.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
-        answerTextField.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
         colorLabel.topAnchor.constraint(equalTo: answerTextField.bottomAnchor, constant: 16).isActive = true
         colorLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
