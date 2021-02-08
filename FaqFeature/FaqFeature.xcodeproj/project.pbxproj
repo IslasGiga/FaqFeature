@@ -14,6 +14,8 @@
 		798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */; };
 		798E3ACD25CF23CF00A324E3 /* arial-rounded-mt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3ACB25CF23CF00A324E3 /* arial-rounded-mt.ttf */; };
 		798E3ACE25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798E3ACC25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf */; };
+		798E3AD125D199DB00A324E3 /* NewFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD025D199DB00A324E3 /* NewFAQViewController.swift */; };
+		798E3AD325D19B7B00A324E3 /* NewFAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD225D19B7B00A324E3 /* NewFAQView.swift */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		798E3AC125CF06C300A324E3 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		798E3ACB25CF23CF00A324E3 /* arial-rounded-mt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt.ttf"; sourceTree = "<group>"; };
 		798E3ACC25CF23CF00A324E3 /* arial-rounded-mt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arial-rounded-mt-bold.ttf"; sourceTree = "<group>"; };
+		798E3AD025D199DB00A324E3 /* NewFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFAQViewController.swift; sourceTree = "<group>"; };
+		798E3AD225D19B7B00A324E3 /* NewFAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFAQView.swift; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		798E3ACF25D199BD00A324E3 /* NewFAQ */ = {
+			isa = PBXGroup;
+			children = (
+				798E3AD025D199DB00A324E3 /* NewFAQViewController.swift */,
+				798E3AD225D19B7B00A324E3 /* NewFAQView.swift */,
+			);
+			path = NewFAQ;
+			sourceTree = "<group>";
+		};
 		79A0E3C025CDF0A7004185A0 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,7 @@
 		79A0E3FE25CDF526004185A0 /* Screnes */ = {
 			isa = PBXGroup;
 			children = (
+				798E3ACF25D199BD00A324E3 /* NewFAQ */,
 				79A0E3FF25CDF55E004185A0 /* FAQList */,
 			);
 			path = Screnes;
@@ -346,9 +360,11 @@
 				798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */,
 				798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */,
 				79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */,
+				798E3AD325D19B7B00A324E3 /* NewFAQView.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,
 				798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */,
 				798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */,
+				798E3AD125D199DB00A324E3 /* NewFAQViewController.swift in Sources */,
 				79A0E40125CDF646004185A0 /* FAQListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

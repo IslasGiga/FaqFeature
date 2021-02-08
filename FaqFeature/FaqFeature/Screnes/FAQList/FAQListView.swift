@@ -33,8 +33,9 @@ class FAQListView: UIView {
         return button
     }()
     
-    init(tableViewConfiguration: TableViewConfiguration, buttonAction: ButtonAction){
+    init(tableViewConfiguration: TableViewConfiguration, buttonAction: @escaping ButtonAction){
         super.init(frame: .zero)
+        self.buttonAction = buttonAction
         self.tableViewConfiguration = tableViewConfiguration
         initialize()
         setupConstraints()

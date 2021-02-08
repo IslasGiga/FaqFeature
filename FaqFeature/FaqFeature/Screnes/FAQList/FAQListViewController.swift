@@ -32,7 +32,7 @@ class FAQListViewController: UIViewController {
 
 extension FAQListViewController{
     func didTapButton(){
-        //TODO: Go to createNewFaq
+        navigationController?.pushViewController(NewFAQViewController(), animated: true)
     }
 }
 
