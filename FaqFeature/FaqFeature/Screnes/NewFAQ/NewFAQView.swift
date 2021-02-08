@@ -17,6 +17,13 @@ class NewFAQView: UIView {
         return view
     }()
     
+    lazy var shadowView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+    
     lazy var questionTitleTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +72,8 @@ class NewFAQView: UIView {
     }
     
     private func initialize(){
-        backgroundColor = .lightGray
+        backgroundColor = .snowLightGray
+        addSubview(shadowView)
         addSubview(containerView)
         containerView.addSubview(questionTitleTextField)
         containerView.addSubview(answerTextField)
@@ -75,10 +83,15 @@ class NewFAQView: UIView {
     }
     
     private func setupConstraints(){
-        containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16).isActive = true
-        containerView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
-        containerView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+        shadowView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16).isActive = true
+        shadowView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
+        shadowView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16).isActive = true
+        shadowView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+        
+        containerView.topAnchor.constraint(equalTo: shadowView.topAnchor).isActive = true
+        containerView.leftAnchor.constraint(equalTo: shadowView.leftAnchor).isActive = true
+        containerView.rightAnchor.constraint(equalTo: shadowView.rightAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor).isActive = true
         
         
         questionTitleTextField.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true
@@ -105,6 +118,28 @@ class NewFAQView: UIView {
         bottomButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         bottomButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
+    }
+    
+}
+
+extension NewFAQView{
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        containerView.layer.cornerRadius = 8
+        containerView.layer.masksToBounds = true
+        shadowView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        shadowView.layer.shadowOpacity = 0.3
+        shadowView.layer.cornerRadius = 10
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        containerView.layer.cornerRadius = 8
+        containerView.layer.masksToBounds = true
+        shadowView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        shadowView.layer.shadowOpacity = 0.2
+        shadowView.layer.cornerRadius = 10
     }
     
 }

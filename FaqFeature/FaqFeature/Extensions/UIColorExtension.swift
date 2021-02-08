@@ -13,4 +13,6 @@ extension UIColor{
     static let snowYellow: UIColor = UIColor(red: 1.00, green: 0.75, blue: 0.00, alpha: 1.00)
     static let snowGreen: UIColor = UIColor(red: 0.27, green: 0.79, blue: 0.65, alpha: 1.00)
     static let snowRed: UIColor = UIColor(red: 1.00, green: 0.44, blue: 0.45, alpha: 1.00)
+    static let snowLightGray: UIColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
+    
 }
