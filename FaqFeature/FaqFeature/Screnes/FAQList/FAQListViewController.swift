@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FAQListViewController: UIViewController {
     
@@ -21,7 +22,18 @@ class FAQListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Perguntas frequentes"
-        
+        let db = Firestore.firestore()
+        db.collection("faq").getDocuments { (snapshot, error) in
+            if let error = error{
+                print(error.localizedDescription)
+            }else if let snapshot = snapshot{
+                for document in snapshot.documents{
+                    print(document.data())
+                }
+            }else{
+                print("Snapshot nulo")
+            }
+        }
     }
     
     override func loadView(){

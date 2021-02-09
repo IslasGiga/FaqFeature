@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>211054480836-htk74l2g733f7p4abafhjpu83ce64lje.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.211054480836-htk74l2g733f7p4abafhjpu83ce64lje</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD3KNuvXZ7oFtWhdqNpjM1xhEQX4Aoa8OY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>211054480836</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Islas.FaqFeature</string>
+	<key>PROJECT_ID</key>
+	<string>snowfaq-e1ac4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snowfaq-e1ac4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:211054480836:ios:987167d7f62c9dd324e891</string>
+</dict>
+</plist>
