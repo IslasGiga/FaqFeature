@@ -19,26 +19,44 @@ class FAQListViewController: UIViewController {
         return view
     }()
     
+    private var viewModel: FAQListViewModel
+    
+    init(viewModel: FAQListViewModel){
+        self.viewModel = viewModel
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Perguntas frequentes"
-        let db = Firestore.firestore()
-        db.collection("faq").getDocuments { (snapshot, error) in
-            if let error = error{
-                print(error.localizedDescription)
-            }else if let snapshot = snapshot{
-                for document in snapshot.documents{
-                    print(document.data())
-                }
-            }else{
-                print("Snapshot nulo")
-            }
-        }
+        viewModel.getFAQList()
+        configBinds()
     }
     
     override func loadView(){
         super.loadView()
         view = customView
+    }
+    
+    private func configBinds(){
+        viewModel.loading.bind{ [weak self] isLoading in
+            print(isLoading ? "Show loading" : "Hide loading")
+        }
+        
+        viewModel.error.bind{ [weak self] error in
+            guard let error = error else {return}
+            print("Show error: \(error)")
+        }
+        
+        viewModel.list.bind{ [weak self] list in
+            print(list)
+        }
     }
 }
 

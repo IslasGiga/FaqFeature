@@ -30,6 +30,11 @@
 		79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */; };
 		79A0E40125CDF646004185A0 /* FAQListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E40025CDF646004185A0 /* FAQListView.swift */; };
 		79B4DDBC25D2D4BA00DC61FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79B4DDBB25D2D4BA00DC61FC /* GoogleService-Info.plist */; };
+		79B4DDC325D2D7E400DC61FC /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4DDC225D2D7E400DC61FC /* FAQModel.swift */; };
+		79B4DDC525D2DC9000DC61FC /* FAQRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4DDC425D2DC9000DC61FC /* FAQRepository.swift */; };
+		79B4DDC725D2EB9100DC61FC /* FAQListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4DDC625D2EB9100DC61FC /* FAQListViewModel.swift */; };
+		79B4DDCA25D2EBBF00DC61FC /* NewFAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4DDC925D2EBBF00DC61FC /* NewFAQViewModel.swift */; };
+		79B4DDCC25D2EC5C00DC61FC /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4DDCB25D2EC5C00DC61FC /* Bindable.swift */; };
 		DDA057F31864BD7B51642B02 /* Pods_FaqFeatureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE74FC93F6589BE7DC8CBFD0 /* Pods_FaqFeatureTests.framework */; };
 		FC2A2F33460BD5B6C4F3211E /* Pods_FaqFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862EBBED7184031600EA51A /* Pods_FaqFeature.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +90,11 @@
 		79A0E3FC25CDF4CC004185A0 /* FAQListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQListViewController.swift; sourceTree = "<group>"; };
 		79A0E40025CDF646004185A0 /* FAQListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQListView.swift; sourceTree = "<group>"; };
 		79B4DDBB25D2D4BA00DC61FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79B4DDC225D2D7E400DC61FC /* FAQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
+		79B4DDC425D2DC9000DC61FC /* FAQRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQRepository.swift; sourceTree = "<group>"; };
+		79B4DDC625D2EB9100DC61FC /* FAQListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQListViewModel.swift; sourceTree = "<group>"; };
+		79B4DDC925D2EBBF00DC61FC /* NewFAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFAQViewModel.swift; sourceTree = "<group>"; };
+		79B4DDCB25D2EC5C00DC61FC /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		BF1D1DA9B92AE0BC117E9BFF /* Pods-FaqFeature-FaqFeatureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaqFeature-FaqFeatureUITests.debug.xcconfig"; path = "Target Support Files/Pods-FaqFeature-FaqFeatureUITests/Pods-FaqFeature-FaqFeatureUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB86444AF825DEFFFCAF3534 /* Pods_FaqFeature_FaqFeatureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaqFeature_FaqFeatureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC817141E0ECFABC2CCD2F6F /* Pods-FaqFeature-FaqFeatureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaqFeature-FaqFeatureUITests.release.xcconfig"; path = "Target Support Files/Pods-FaqFeature-FaqFeatureUITests/Pods-FaqFeature-FaqFeatureUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +233,10 @@
 		79A0E3CB25CDF0A7004185A0 /* FaqFeature */ = {
 			isa = PBXGroup;
 			children = (
+				79B4DDC825D2EBA500DC61FC /* Util */,
+				79B4DDC125D2D7C600DC61FC /* Model */,
+				79B4DDBE25D2D67E00DC61FC /* Repository */,
+				79B4DDBD25D2D66B00DC61FC /* ViewModel */,
 				798E3AC325CF232600A324E3 /* Resources */,
 				798E3AB925CEEAF900A324E3 /* Extensions */,
 				798E3AB425CE017000A324E3 /* Components */,
@@ -272,6 +286,39 @@
 				79A0E40025CDF646004185A0 /* FAQListView.swift */,
 			);
 			path = FAQList;
+			sourceTree = "<group>";
+		};
+		79B4DDBD25D2D66B00DC61FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				79B4DDC625D2EB9100DC61FC /* FAQListViewModel.swift */,
+				79B4DDC925D2EBBF00DC61FC /* NewFAQViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		79B4DDBE25D2D67E00DC61FC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				79B4DDC425D2DC9000DC61FC /* FAQRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		79B4DDC125D2D7C600DC61FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79B4DDC225D2D7E400DC61FC /* FAQModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79B4DDC825D2EBA500DC61FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				79B4DDCB25D2EC5C00DC61FC /* Bindable.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,13 +565,18 @@
 			files = (
 				79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */,
 				798E3ABD25CEEB7B00A324E3 /* UIColorExtension.swift in Sources */,
+				79B4DDCC25D2EC5C00DC61FC /* Bindable.swift in Sources */,
 				798E3AC225CF06C300A324E3 /* FAQTableViewCell.swift in Sources */,
 				798E3AD725D1AE7600A324E3 /* SnowTextView.swift in Sources */,
 				798E3AB625CE018A00A324E3 /* SnowNavigationControllerViewController.swift in Sources */,
 				79A0E3FD25CDF4CC004185A0 /* FAQListViewController.swift in Sources */,
+				79B4DDC525D2DC9000DC61FC /* FAQRepository.swift in Sources */,
 				798E3AD525D1AD9F00A324E3 /* SnowBottomButton.swift in Sources */,
+				79B4DDC325D2D7E400DC61FC /* FAQModel.swift in Sources */,
 				798E3AD325D19B7B00A324E3 /* NewFAQView.swift in Sources */,
+				79B4DDCA25D2EBBF00DC61FC /* NewFAQViewModel.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,
+				79B4DDC725D2EB9100DC61FC /* FAQListViewModel.swift in Sources */,
 				798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */,
 				798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */,
 				798E3AD125D199DB00A324E3 /* NewFAQViewController.swift in Sources */,

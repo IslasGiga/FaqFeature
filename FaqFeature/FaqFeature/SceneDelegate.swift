@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = SnowNavigationControllerViewController(rootViewController: FAQListViewController())
+        let repository = FAQRepository()
+        let viewModel = FAQListViewModel(repository: repository)
+        let viewController = FAQListViewController(viewModel: viewModel)
+        window.rootViewController = SnowNavigationControllerViewController(rootViewController: viewController)
         self.window = window
         window.makeKeyAndVisible()
         
