@@ -97,7 +97,7 @@ class FAQTableViewCell: UITableViewCell {
         
         colorView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         colorView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
-        colorView.widthAnchor.constraint(equalToConstant: 2).isActive = true
+        colorView.widthAnchor.constraint(equalToConstant: 3).isActive = true
         colorView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         
         expandButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16).isActive = true

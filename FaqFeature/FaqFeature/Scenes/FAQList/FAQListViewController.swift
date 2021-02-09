@@ -19,7 +19,7 @@ class FAQListViewController: UIViewController {
         return view
     }()
     
-    weak var loadingVC: LoadingViewController?
+    var loadingVC: LoadingViewController?
     
     private var viewModel: FAQListViewModel
     
@@ -46,7 +46,7 @@ class FAQListViewController: UIViewController {
     }
     
     private func configBinds(){
-        viewModel.loading.bind(skip: true) { [weak self] (isLoading) in
+        viewModel.loading.bind{ [weak self] (isLoading) in
             guard let self = self else {return}
             isLoading ?
                 self.loadingVC?.show(on: self) :
