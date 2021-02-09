@@ -226,7 +226,7 @@
 				798E3AC325CF232600A324E3 /* Resources */,
 				798E3AB925CEEAF900A324E3 /* Extensions */,
 				798E3AB425CE017000A324E3 /* Components */,
-				79A0E3FE25CDF526004185A0 /* Screnes */,
+				79A0E3FE25CDF526004185A0 /* Scenes */,
 				79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */,
 				79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */,
 				79A0E3D225CDF0A7004185A0 /* Main.storyboard */,
@@ -255,13 +255,13 @@
 			path = FaqFeatureUITests;
 			sourceTree = "<group>";
 		};
-		79A0E3FE25CDF526004185A0 /* Screnes */ = {
+		79A0E3FE25CDF526004185A0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				798E3ACF25D199BD00A324E3 /* NewFAQ */,
 				79A0E3FF25CDF55E004185A0 /* FAQList */,
 			);
-			path = Screnes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		79A0E3FF25CDF55E004185A0 /* FAQList */ = {
