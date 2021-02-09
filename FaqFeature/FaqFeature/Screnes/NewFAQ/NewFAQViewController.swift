@@ -23,5 +23,11 @@ class NewFAQViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Adicionar pergunta"
+        customView.bottomButton.action = addNewFaq
+    }
+    
+    private func addNewFaq(){
+        //TODO: Check all fields are filled
+        navigationController?.popViewController(animated: true)
     }
 }

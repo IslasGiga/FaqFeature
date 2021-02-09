@@ -183,7 +183,6 @@ class ColorView: UIView{
         checkmarkImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         checkmarkImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5).isActive = true
         checkmarkImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
-        
     }
     
     func shouldShowCheckmark(_ checked: Bool){
