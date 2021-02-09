@@ -10,6 +10,8 @@ import UIKit
 
 class SnowTextField: UIView {
 
+    var title: String
+    
     lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -27,8 +29,8 @@ class SnowTextField: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Título da pergunta"
-        label.textColor = .lightGray
-        label.font = UIFont.arialFont(withSize: 14)
+        label.textColor = .snowTextGray
+        label.font = UIFont.arialBoldFont(withSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -42,7 +44,8 @@ class SnowTextField: UIView {
         return textView
     }()
     
-    init(){
+    init(title: String = ""){
+        self.title = title
         super.init(frame: .zero)
         initialize()
         setupConstraints()
@@ -87,7 +90,7 @@ class SnowTextField: UIView {
         containerView.layer.cornerRadius = 4
         containerView.layer.masksToBounds = true
         containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
+        containerView.layer.borderColor = UIColor.snowTextGray.cgColor
     }
 
     override func layoutIfNeeded() {
@@ -95,7 +98,7 @@ class SnowTextField: UIView {
         containerView.layer.cornerRadius = 4
         containerView.layer.masksToBounds = true
         containerView.layer.borderWidth = 2
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
+        containerView.layer.borderColor = UIColor.snowTextGray.cgColor
     }
 
 }

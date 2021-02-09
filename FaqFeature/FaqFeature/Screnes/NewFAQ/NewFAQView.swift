@@ -36,18 +36,8 @@ class NewFAQView: UIView {
         return textView
     }()
     
-    lazy var colorLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Cor"
-        label.textAlignment = .center
-        label.textColor = .gray
-        return label
-    }()
-    
-    lazy var colorPicker: UIView = {
-        let view = UIView()
-        view.backgroundColor = .snowRed
+    lazy var colorPicker: SnowColorPickerView = {
+        let view = SnowColorPickerView(title: "Cor")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -73,7 +63,6 @@ class NewFAQView: UIView {
         addSubview(containerView)
         containerView.addSubview(questionTitleTextField)
         containerView.addSubview(answerTextField)
-        containerView.addSubview(colorLabel)
         containerView.addSubview(colorPicker)
         containerView.addSubview(bottomButton)
     }
@@ -99,11 +88,8 @@ class NewFAQView: UIView {
         answerTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
         answerTextField.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
 
-        colorLabel.topAnchor.constraint(equalTo: answerTextField.bottomAnchor, constant: 16).isActive = true
-        colorLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
-        colorLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
 
-        colorPicker.topAnchor.constraint(equalTo: colorLabel.bottomAnchor, constant: 16).isActive = true
+        colorPicker.topAnchor.constraint(equalTo: answerTextField.bottomAnchor, constant: 16).isActive = true
         colorPicker.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 16).isActive = true
         colorPicker.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -16).isActive = true
         colorPicker.heightAnchor.constraint(equalToConstant: 60).isActive = true
