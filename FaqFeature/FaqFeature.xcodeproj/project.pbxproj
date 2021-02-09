@@ -20,6 +20,7 @@
 		798E3AD525D1AD9F00A324E3 /* SnowBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD425D1AD9F00A324E3 /* SnowBottomButton.swift */; };
 		798E3AD725D1AE7600A324E3 /* SnowTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD625D1AE7600A324E3 /* SnowTextView.swift */; };
 		798E3AD925D1D0B600A324E3 /* SnowColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD825D1D0B600A324E3 /* SnowColorPickerView.swift */; };
+		79941F0825D2F9E300023C42 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79941F0725D2F9E300023C42 /* LoadingViewController.swift */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		798E3AD425D1AD9F00A324E3 /* SnowBottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowBottomButton.swift; sourceTree = "<group>"; };
 		798E3AD625D1AE7600A324E3 /* SnowTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowTextView.swift; sourceTree = "<group>"; };
 		798E3AD825D1D0B600A324E3 /* SnowColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowColorPickerView.swift; sourceTree = "<group>"; };
+		79941F0725D2F9E300023C42 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				798E3AD425D1AD9F00A324E3 /* SnowBottomButton.swift */,
 				798E3AD625D1AE7600A324E3 /* SnowTextView.swift */,
 				798E3AD825D1D0B600A324E3 /* SnowColorPickerView.swift */,
+				79941F0725D2F9E300023C42 /* LoadingViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				798E3AD325D19B7B00A324E3 /* NewFAQView.swift in Sources */,
 				79B4DDCA25D2EBBF00DC61FC /* NewFAQViewModel.swift in Sources */,
 				79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */,
+				79941F0825D2F9E300023C42 /* LoadingViewController.swift in Sources */,
 				79B4DDC725D2EB9100DC61FC /* FAQListViewModel.swift in Sources */,
 				798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */,
 				798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */,

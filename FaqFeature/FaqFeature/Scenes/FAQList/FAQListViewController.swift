@@ -19,6 +19,8 @@ class FAQListViewController: UIViewController {
         return view
     }()
     
+    weak var loadingVC: LoadingViewController?
+    
     private var viewModel: FAQListViewModel
     
     init(viewModel: FAQListViewModel){
@@ -30,12 +32,11 @@ class FAQListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Perguntas frequentes"
         viewModel.getFAQList()
+        loadingVC = LoadingViewController()
         configBinds()
     }
     
@@ -45,8 +46,11 @@ class FAQListViewController: UIViewController {
     }
     
     private func configBinds(){
-        viewModel.loading.bind{ [weak self] isLoading in
-            print(isLoading ? "Show loading" : "Hide loading")
+        viewModel.loading.bind(skip: true) { [weak self] (isLoading) in
+            guard let self = self else {return}
+            isLoading ?
+                self.loadingVC?.show(on: self) :
+                self.loadingVC?.hide()
         }
         
         viewModel.error.bind{ [weak self] error in
