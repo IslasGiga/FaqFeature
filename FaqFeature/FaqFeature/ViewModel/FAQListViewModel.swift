@@ -14,6 +14,10 @@ class FAQListViewModel{
     var error: Bindable<Error?> = Bindable(nil)
     var list: Bindable<[FAQModel]> = Bindable([])
     
+    var numberOfRowsInSection: Int{
+        return list.value.count
+    }
+    
     private var repository: FAQRepository
     
     init(repository: FAQRepository){
@@ -32,5 +36,7 @@ class FAQListViewModel{
         }
     }
     
-    
+    public func faqForRoll(atIndexPath indexPath: IndexPath) -> FAQModel{
+        return list.value[indexPath.row]
+    }    
 }

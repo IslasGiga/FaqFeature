@@ -12,16 +12,23 @@ import FirebaseFirestore
 public struct FAQModel{
     let question: String
     let answer: String
+    let colorHex: String
     
     public init(fromDict dict : [String: Any]){
         question = dict["question"] as? String ?? ""
         answer = dict["answer"] as? String ?? ""
+        colorHex = dict ["colorHex"] as? String ?? ""
     }
     
     public var toDict: [String: Any]{
         return [
             "question": question,
-            "answer": answer
+            "answer": answer,
+            "colorHex": colorHex
         ]
+    }
+    
+    public var colorValue: UIColor{
+        return UIColorConverter.colorWithHexString(hexString: colorHex)
     }
 }

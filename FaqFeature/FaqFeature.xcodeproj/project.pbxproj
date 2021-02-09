@@ -21,6 +21,7 @@
 		798E3AD725D1AE7600A324E3 /* SnowTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD625D1AE7600A324E3 /* SnowTextView.swift */; };
 		798E3AD925D1D0B600A324E3 /* SnowColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E3AD825D1D0B600A324E3 /* SnowColorPickerView.swift */; };
 		79941F0825D2F9E300023C42 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79941F0725D2F9E300023C42 /* LoadingViewController.swift */; };
+		79941F0A25D305EC00023C42 /* UIColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79941F0925D305EC00023C42 /* UIColorConverter.swift */; };
 		79A0E3CD25CDF0A7004185A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */; };
 		79A0E3CF25CDF0A7004185A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */; };
 		79A0E3D425CDF0A7004185A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A0E3D225CDF0A7004185A0 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		798E3AD625D1AE7600A324E3 /* SnowTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowTextView.swift; sourceTree = "<group>"; };
 		798E3AD825D1D0B600A324E3 /* SnowColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowColorPickerView.swift; sourceTree = "<group>"; };
 		79941F0725D2F9E300023C42 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		79941F0925D305EC00023C42 /* UIColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorConverter.swift; sourceTree = "<group>"; };
 		79A0E3C925CDF0A7004185A0 /* FaqFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaqFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A0E3CC25CDF0A7004185A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A0E3CE25CDF0A7004185A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				79B4DDCB25D2EC5C00DC61FC /* Bindable.swift */,
+				79941F0925D305EC00023C42 /* UIColorConverter.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				79941F0825D2F9E300023C42 /* LoadingViewController.swift in Sources */,
 				79B4DDC725D2EB9100DC61FC /* FAQListViewModel.swift in Sources */,
 				798E3ABB25CEEB0B00A324E3 /* UIFontExtension.swift in Sources */,
+				79941F0A25D305EC00023C42 /* UIColorConverter.swift in Sources */,
 				798E3ABF25CEFE6A00A324E3 /* SnowButton.swift in Sources */,
 				798E3AD125D199DB00A324E3 /* NewFAQViewController.swift in Sources */,
 				79A0E40125CDF646004185A0 /* FAQListView.swift in Sources */,

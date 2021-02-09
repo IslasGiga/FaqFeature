@@ -59,7 +59,7 @@ class FAQListViewController: UIViewController {
         }
         
         viewModel.list.bind{ [weak self] list in
-            print(list)
+            self?.customView.tableView.reloadData()
         }
     }
 }
@@ -86,17 +86,17 @@ extension FAQListViewController: UITableViewDelegate{
 extension FAQListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FAQTableViewCell.id, for: indexPath) as? FAQTableViewCell else{
-            print("Deu ruim!")
             return UITableViewCell()
         }
-        cell.setup(viewModel: FAQCellViewModel(question: "Question", answer: "Loren Ipsun Dolor, blablablablabalbalablablablabalbalbalbalablablablablabalbalbalbalbalablablablabalbalbalbalbalablablablablablablablabalbalbalbalablbalaa", color: .snowRed))
         
+        let model = viewModel.faqForRoll(atIndexPath: indexPath)
+        cell.setup(model: model)
         return cell
     }
     

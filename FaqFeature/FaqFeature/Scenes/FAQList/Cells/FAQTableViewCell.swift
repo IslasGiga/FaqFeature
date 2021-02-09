@@ -8,13 +8,6 @@
 
 import UIKit
 
-struct FAQCellViewModel{
-    let question: String
-    let answer: String
-    let color: UIColor
-}
-
-
 class FAQTableViewCell: UITableViewCell {
     
     var expanded: Bool = false{
@@ -27,7 +20,7 @@ class FAQTableViewCell: UITableViewCell {
     
     static let id: String = "FAQTableViewCell"
     
-    private var viewModel: FAQCellViewModel?
+    private var model: FAQModel?
     
     private var expandButton: UIButton = {
         let button = UIButton()
@@ -60,7 +53,7 @@ class FAQTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.arialBoldFont(withSize: 18)
-        label.text = viewModel?.question
+        label.text = model?.question
         return label
     }()
     
@@ -68,14 +61,14 @@ class FAQTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.arialFont(withSize: 16)
-        label.text = viewModel?.answer
+        label.text = model?.answer
         label.numberOfLines = 0
         return label
     }()
     
-    func setup(viewModel: FAQCellViewModel){
-        self.viewModel = viewModel
-        colorView.backgroundColor = viewModel.color
+    func setup(model: FAQModel){
+        self.model = model
+        colorView.backgroundColor = model.colorValue
         initialize()
         setupConstraints()
     }
