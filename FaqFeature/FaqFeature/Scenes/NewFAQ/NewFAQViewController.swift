@@ -52,11 +52,11 @@ class NewFAQViewController: UIViewController {
     }
     
     private func configBinds(){
-        viewModel.loading.bind { [weak self] (loading) in
+        viewModel.loading.bind (skip: true) { [weak self] (loading) in
             guard let self = self else {return}
-            //TODO: Colocar loading no botão
             self.customView.isUserInteractionEnabled = !loading
-            print(loading)
+            loading ? self.customView.bottomButton.startLoading()
+            : self.customView.bottomButton.stopLoading()
         }
         
         viewModel.error.bind(skip: true) {[weak self] (error) in
