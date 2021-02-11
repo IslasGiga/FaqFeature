@@ -58,15 +58,15 @@ extension FAQListView{
     
     fileprivate func setupConstraints(){
         
-        bottomButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
-        bottomButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
-        bottomButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16).isActive = true
+        bottomButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+        bottomButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16).isActive = true
+        bottomButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16).isActive = true
         bottomButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         
-        tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
-        tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
+        tableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomButton.topAnchor, constant: -16).isActive = true
     }
 }

@@ -68,10 +68,10 @@ class NewFAQView: UIView {
     }
     
     private func setupConstraints(){
-        shadowView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16).isActive = true
-        shadowView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
-        shadowView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16).isActive = true
-        shadowView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+        shadowView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
+        shadowView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 16).isActive = true
+        shadowView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -16).isActive = true
+        shadowView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
         
         containerView.topAnchor.constraint(equalTo: shadowView.topAnchor).isActive = true
         containerView.leftAnchor.constraint(equalTo: shadowView.leftAnchor).isActive = true
