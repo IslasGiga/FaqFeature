@@ -12,6 +12,10 @@ class SnowTextField: UIView {
 
     var title: String
     
+    var text: String {
+        return textView.text
+    }
+    
     lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white

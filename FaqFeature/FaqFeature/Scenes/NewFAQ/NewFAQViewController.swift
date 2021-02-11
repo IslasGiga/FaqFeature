@@ -10,10 +10,21 @@ import UIKit
 
 class NewFAQViewController: UIViewController {
 
+    var viewModel: NewFAQViewModel
+    
     lazy var customView: NewFAQView = {
         let view = NewFAQView()
         return view
     }()
+    
+    init(viewModel: NewFAQViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         super.loadView()
@@ -22,12 +33,39 @@ class NewFAQViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         title = "Adicionar pergunta"
         customView.bottomButton.action = addNewFaq
+        configBinds()
     }
     
     private func addNewFaq(){
-        //TODO: Check all fields are filled
-        navigationController?.popViewController(animated: true)
+        //TODO: Check if all fields are filled correctly
+        
+        let question = customView.questionTitleTextField.text
+        let answer = customView.answerTextField.text
+        let color = customView.colorPicker.selectedColor ?? UIColor.purple
+        let colorHex = UIColorConverter.hexStringFromColor(color: color)
+        let model = FAQModel(question: question, answer: answer, colorHex: colorHex)
+        viewModel.saveFaq(model)
+    }
+    
+    private func configBinds(){
+        viewModel.loading.bind { [weak self] (loading) in
+            guard let self = self else {return}
+            //TODO: Colocar loading no botão
+            self.customView.isUserInteractionEnabled = !loading
+            print(loading)
+        }
+        
+        viewModel.error.bind(skip: true) {[weak self] (error) in
+            guard let self = self else {return}
+            if let error = error{
+                print(error)
+            }else{
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

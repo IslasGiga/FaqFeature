@@ -80,7 +80,6 @@ class FAQTableViewCell: UITableViewCell {
         containerView.addSubview(colorView)
         containerView.addSubview(expandButton)
         containerView.addSubview(questionLabel)
-        
     }
     
     private func setupConstraints(){

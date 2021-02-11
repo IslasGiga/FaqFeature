@@ -26,9 +26,25 @@ public class FAQRepository{
     init(){
         db = Firestore.firestore()
     }
+//    
+//    func getAllFaq(completion: @escaping (Result<[FAQModel], Error>) -> Void){
+//        db.collection("faq").getDocuments { (snapshot, error) in
+//            if let error = error{
+//                completion(.failure(error))
+//            }else if let snapshot = snapshot{
+//                let documents = snapshot.documents
+//                let faqList = documents.compactMap({
+//                    FAQModel(fromDict: $0.data())
+//                })
+//                completion(.success(faqList))
+//            }else{
+//                completion(.failure(RepositoryError.snapshotNil))
+//            }
+//        }
+//    }
     
-    func getAllFaq(completion: @escaping (Result<[FAQModel], Error>) -> Void){
-        db.collection("faq").getDocuments { (snapshot, error) in
+    func updateFAQList(completion: @escaping (Result<[FAQModel], Error>) -> Void){
+        db.collection("faq").addSnapshotListener { (snapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else if let snapshot = snapshot{

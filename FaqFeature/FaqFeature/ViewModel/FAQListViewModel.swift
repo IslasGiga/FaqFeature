@@ -18,7 +18,7 @@ class FAQListViewModel{
         return list.value.count
     }
     
-    private var repository: FAQRepository
+    var repository: FAQRepository
     
     init(repository: FAQRepository){
         self.repository = repository
@@ -26,7 +26,7 @@ class FAQListViewModel{
     
     public func getFAQList(){
         loading.value = true
-        repository.getAllFaq { [weak self] (result) in
+        repository.updateFAQList { [weak self] (result) in
             guard let self = self else {return}
             self.loading.value = false
             switch result{

@@ -59,6 +59,9 @@ class FAQListViewController: UIViewController {
         }
         
         viewModel.list.bind{ [weak self] list in
+            list.forEach({
+                print($0)
+            })
             self?.customView.tableView.reloadData()
         }
     }
@@ -66,7 +69,11 @@ class FAQListViewController: UIViewController {
 
 extension FAQListViewController{
     func didTapButton(){
-        navigationController?.pushViewController(NewFAQViewController(), animated: true)
+        //TODO: put this on coordinator
+        let repository = viewModel.repository
+        let viewModel = NewFAQViewModel(repository: repository)
+        let vc = NewFAQViewController(viewModel: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

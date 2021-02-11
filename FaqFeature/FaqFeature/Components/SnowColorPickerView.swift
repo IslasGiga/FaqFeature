@@ -115,7 +115,6 @@ class SnowColorPickerView: UIView {
     }
     
     private func didCheck(color: UIColor){
-        print("\(color)")
         let colorViews: [ColorView] = [
             greenColorView,
             blueColorView,

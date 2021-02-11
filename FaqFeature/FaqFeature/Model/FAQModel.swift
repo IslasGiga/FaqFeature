@@ -14,6 +14,12 @@ public struct FAQModel{
     let answer: String
     let colorHex: String
     
+    public init(question: String, answer: String, colorHex: String){
+        self.question = question
+        self.answer = answer
+        self.colorHex = colorHex
+    }
+    
     public init(fromDict dict : [String: Any]){
         question = dict["question"] as? String ?? ""
         answer = dict["answer"] as? String ?? ""
