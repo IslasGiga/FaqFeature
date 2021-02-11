@@ -25,13 +25,13 @@ class NewFAQView: UIView {
     }()
     
     lazy var questionTitleTextField: SnowTextField = {
-        let textView = SnowTextField()
+        let textView = SnowTextField(title: "Título da pergunta")
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
     
     lazy var answerTextField: SnowTextField = {
-        let textView = SnowTextField()
+        let textView = SnowTextField(title: "Resposta da pergunta")
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()

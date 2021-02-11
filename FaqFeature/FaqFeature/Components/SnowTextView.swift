@@ -32,7 +32,7 @@ class SnowTextField: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Título da pergunta"
+        label.text = self.title
         label.textColor = .snowTextGray
         label.font = UIFont.arialBoldFont(withSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
