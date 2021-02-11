@@ -13,10 +13,7 @@ class FAQListViewModel{
     var loading: Bindable<Bool> = Bindable(false)
     var error: Bindable<Error?> = Bindable(nil)
     var list: Bindable<[FAQModel]> = Bindable([])
-    
-    var numberOfRowsInSection: Int{
-        return list.value.count
-    }
+    var filteredList: Bindable<[FAQModel]> = Bindable([])
     
     var repository: FAQRepository
     
@@ -36,7 +33,17 @@ class FAQListViewModel{
         }
     }
     
-    public func faqForRoll(atIndexPath indexPath: IndexPath) -> FAQModel{
-        return list.value[indexPath.row]
-    }    
+    public func numberOfRowsInSection(isFiltering: Bool) -> Int{
+        return isFiltering ? filteredList.value.count : list.value.count
+    }
+    
+    public func faqForRoll(atIndexPath indexPath: IndexPath, isFiltering: Bool) -> FAQModel{
+        return isFiltering ? filteredList.value[indexPath.row] : list.value[indexPath.row]
+    }
+    
+    public func filterFaqListForSearchText(_ searchText: String){
+        filteredList.value = list.value.filter({
+            $0.question.contains(searchText) || $0.answer.contains(searchText)
+        })
+    }
 }

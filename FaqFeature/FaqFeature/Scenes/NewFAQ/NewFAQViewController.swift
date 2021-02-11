@@ -45,8 +45,19 @@ class NewFAQViewController: UIViewController {
         
         let question = customView.questionTitleTextField.text
         let answer = customView.answerTextField.text
-        let color = customView.colorPicker.selectedColor ?? UIColor.purple
-        let colorHex = UIColorConverter.hexStringFromColor(color: color)
+        let color = customView.colorPicker.selectedColor
+        
+        guard let selectedColor = color, !question.isEmpty, !answer.isEmpty else{
+            let alert = UIAlertController(title: "Erro!", message: "Preencha todos os campos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        let colorHex = UIColorConverter.hexStringFromColor(color: selectedColor)
         let model = FAQModel(question: question, answer: answer, colorHex: colorHex)
         viewModel.saveFaq(model)
     }
@@ -62,10 +73,17 @@ class NewFAQViewController: UIViewController {
         viewModel.error.bind(skip: true) {[weak self] (error) in
             guard let self = self else {return}
             if let error = error{
-                print(error)
+                let alert = UIAlertController(title: "Erro!", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
+                DispatchQueue.main.async { [weak self] in
+                    self?.present(alert, animated: true, completion: nil)
+                }
             }else{
                 self.navigationController?.popViewController(animated: true)
             }
         }
     }
 }
+
